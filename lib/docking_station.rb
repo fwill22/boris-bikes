@@ -8,8 +8,10 @@ class DockingStation
   # release_bike needs to change
 
   def release_bike
+    fail 'Sorry mate, don\'t be a dock' unless @bike
     @bike
   end
+
 
   def dock(bike)
     @bike = bike
