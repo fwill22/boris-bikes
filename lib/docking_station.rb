@@ -1,6 +1,11 @@
 require_relative 'bike'
 
 class DockingStation 
+  
+  def initialize
+    @bikes = []
+  end
+
   attr_reader :bike
 
   # assume there are no bikes
@@ -13,7 +18,9 @@ class DockingStation
 
 
   def dock(bike)
-    fail "Docking Station full" if @bike
+    #want to count number of elements in @bikes array
+    #and throw the error when there are more than 20
+    fail "Docking Station full" if @bike 
     @bike = bike
   end
 

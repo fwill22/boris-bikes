@@ -22,7 +22,7 @@ describe DockingStation do
   #when DockingStation
   describe '#dock(bike)' do
     it "should raise an error when docking station is full" do
-      subject.dock(Bike.new)
+      @bikes = [subject.dock(Bike.new)] 
       expect{subject.dock(Bike.new)}.to raise_error "Docking Station full"
     end
   end
