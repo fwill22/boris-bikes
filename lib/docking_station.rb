@@ -6,7 +6,6 @@ class DockingStation
   # assume there are no bikes
   # when call release_bike --> Error
   # release_bike needs to change
-
   def release_bike
     fail 'Sorry mate, don\'t be a dock' unless @bike
     @bike
@@ -14,6 +13,7 @@ class DockingStation
 
 
   def dock(bike)
+    fail "Docking Station full" if @bike
     @bike = bike
   end
 
